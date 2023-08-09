@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgba(1, 0, 0, 0.788);
+  padding: 20px 0 0 20px;
+  height: 100vh;
+}
+
+.menu {
+  background: white;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  color: teal;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.titulo,
+.subtitulo {
+  color: whitesmoke;
+  text-align: center;
+}
+
+.subtitulo {
+  font-style: italic;
+}
+
+/*se a imagem de fundo for muito grante podemos cortala em pequeno quadrado e coloca-la com background com repit que preencherá a fundo e principalmente economisaza a banda de internet do usuário.*/

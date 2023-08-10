@@ -1,3 +1,4 @@
+/*reset css simples*/
 * {
   margin: 0;
   padding: 0;
@@ -5,13 +6,44 @@
 }
 
 body {
-  background: rgba(1, 0, 0, 0.788);
-  padding: 20px 0 0 20px;
+  background-color: rgb(3, 3, 43);
+  font-family: Arial;
   height: 100vh;
+  font-size: 12px;
+
+}
+
+@media (min-width:400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-width:600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+.cabecalho {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
 }
 
 .menu {
   background: white;
+  position: fixed; /*essa propiredade encolher o tamanha da largura do elemento por padrao.*/
+  top: 0;/*Essa propriedade só funciona junto com o position*/
+  width: 100vw;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
+  background-color: aquamarine;
+  border-radius: 8px;
 }
 
 .menu ul {
@@ -43,3 +75,13 @@ body {
 }
 
 /*se a imagem de fundo for muito grante podemos cortala em pequeno quadrado e coloca-la com background com repit que preencherá a fundo e principalmente economisaza a banda de internet do usuário.*/
+
+.img-portfolio {
+  height: 180px;
+  width: 180px;
+}
+
+.container-img {
+  display: flex;
+  margin: 20%;
+}

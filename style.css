@@ -28,27 +28,21 @@ body {
 .cabecalho {
   align-items: center;
   display: flex;
-  height: 100vh;
+  height: 50vh;
   justify-content: center;
 }
 
 .menu {
-  background: white;
+  background-color: rgb(18, 18, 120);
   position: fixed; /*essa propiredade encolher o tamanha da largura do elemento por padrao.*/
   top: 0;/*Essa propriedade só funciona junto com o position*/
   width: 100vw;
 }
 
-.menu a {
-  display: block;
-  padding: 10px 20px;
-  background-color: aquamarine;
-  border-radius: 8px;
-}
-
 .menu ul {
   display: flex;
   justify-content: space-around;
+  height: 30;
 }
 
 .menu li {
@@ -56,7 +50,12 @@ body {
 }
 
 .menu a {
-  color: teal;
+  display: block;
+  padding: 10px 20px;
+  background-color:white;
+/*  background-color: aquamarine;*/
+  border-radius: 8px;
+  color: rgb(3, 3, 43);
   text-decoration: none;
 }
 
@@ -66,22 +65,71 @@ body {
 
 .titulo,
 .subtitulo {
+  font-family: kalam;
   color: whitesmoke;
   text-align: center;
 }
 
 .subtitulo {
   font-style: italic;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 /*se a imagem de fundo for muito grante podemos cortala em pequeno quadrado e coloca-la com background com repit que preencherá a fundo e principalmente economisaza a banda de internet do usuário.*/
 
-.img-portfolio {
-  height: 180px;
-  width: 180px;
+/*section projetos*/
+.container-livros{
+  padding: 2em;
 }
 
-.container-img {
-  display: flex;
-  margin: 20%;
+.container-livros h2 {
+  color: whitesmoke;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2em;
+  margin-bottom: 1.5em;
+}
+
+.container-livros .grid {
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 560px) {
+  .container-livros .grid {
+    grid-template-columns: 240px 240px;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 880px) {
+  .container-livros .grid {
+    grid-template-columns: repeat(3, 240px);
+    align-content: center;
+    justify-content: center;
+    height: calc(100vh-48px-8em);
+  }
+}
+
+
+.container-livros figure {
+  text-align: center;
+}
+
+.img-portifolio {
+  height: 180px;
+  width: 240px;
+  object-fit: cover;
+  object-position: 0px;/*Movbimenta a imagem mantendo o quadro, podemos colocar valores para eixo x e y*/
+}
+
+@media (min-width: 1200px) {
+  .img-portifolio {
+    height: auto;
+    width: 100%;
+  }
+  
+}
+
+figcaption {
+  color: whitesmoke;
 }
